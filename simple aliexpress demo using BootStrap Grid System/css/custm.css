@@ -1,0 +1,28 @@
+.image-card {
+            border: 2px solid #450303;
+            padding: 10px;
+            margin-bottom: 20px; /* Space between cards */
+            text-align: center;
+            /* Fixed width for all cards */; 
+        }
+        .image-card img {
+            max-width: 100%; /* Ensure img-fluid works if it somehow fails */
+            height: auto;
+            display: block; /* Helps in layout */
+            margin: 0 auto; /* Center image within its column */
+        }
+
+
+
+.container {
+     
+    margin: 5px auto 50px;
+     padding: 15px;
+ }
+ .container-fluid {
+     margin-bottom:50px;
+     padding: 15px;
+ }
+ body{
+            background-color: #72abe4; /* Light background for better contrast */
+        }
