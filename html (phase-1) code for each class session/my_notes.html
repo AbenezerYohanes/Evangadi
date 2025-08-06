@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figure and Figcaption Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        figure {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 20px auto; /* Center the figure and add space */
+            max-width: 600px; /* Limit width for better presentation */
+            text-align: center; /* Center content within the figure */
+            background-color: #f9f9f9;
+        }
+        figure img {
+            max-width: 100%; /* Make images responsive */
+            height: auto;
+            display: block; /* Remove extra space below image */
+            margin: 0 auto; /* Center the image */
+        }
+        figcaption {
+            font-style: italic;
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 10px; /* Space between content and caption */
+        }
+        pre {
+            background-color: #eee;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: left; /* Keep code left-aligned */
+            overflow-x: auto; /* For long lines of code */
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Understanding Figures and Captions</h1>
+
+    <p>The `&lt;figure&gt;` and `&lt;figcaption&gt;` elements are powerful tools for structuring content on your web pages. They provide semantic meaning and improve accessibility.</p>
+
+    <figure>
+        <img src="https://via.placeholder.com/400x250/FF5733/FFFFFF?text=Placeholder+Image" alt="A red placeholder rectangle with text 'Placeholder Image'.">
+        <figcaption>Figure 1: An example placeholder image demonstrating the use of `&lt;figure&gt;` and `&lt;figcaption&gt;`.</figcaption>
+    </figure>
+
+    <p>As you can see, the image is enclosed within the `&lt;figure&gt;` tags, and its caption is provided by `&lt;figcaption&gt;`.</p>
+
+    <figure>
+        <figcaption>Listing 1: Basic HTML structure for a web page.</figcaption>
+        <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+    </figure>
+
+    <p>Figures aren't just for images! They are perfect for code listings, diagrams, and other self-contained content that needs a descriptive label.</p>
+
+    <figure>
+        <img src="https://via.placeholder.com/200x150/3366FF/FFFFFF?text=Image+A" alt="Blue rectangle with text 'Image A'.">
+        <img src="https://via.placeholder.com/200x150/66FF33/FFFFFF?text=Image+B" alt="Green rectangle with text 'Image B'.">
+        <figcaption>Figure 2: A collection of two related placeholder images (Image A and Image B).</figcaption>
+    </figure>
+
+    <p>You can even group multiple related items under a single `&lt;figure&gt;` with one `&lt;figcaption&gt;` if they conceptually form a single unit.</p>
+
+</body>
+</html>
