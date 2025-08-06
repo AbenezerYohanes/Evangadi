@@ -1,0 +1,12 @@
+{
+  "name": "simple_project_on_server_cration_req_and-repo_object_using_if_condition_based_on_req_url",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
