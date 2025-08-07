@@ -15,9 +15,10 @@ let server=http.createServer(( req, res ) =>{
     console.log(requested_file_directory);
 
 
-    if (user_eneter_url_end_part === "/index.html"){
+    if (user_eneter_url_end_part === "/" || user_eneter_url_end_part === "index.html" ){
+        requested_file_directory = path.join(__dirname, "html", "index.html");
 
-     fs.readFile(requested_file_directory , "utf8", (err, data) => {
+     fs.readFile(requested_file_directory, "utf8", (err, data) => {
         if (err) {
             console.log(err);
             // Consider sending an error response to the client
@@ -31,9 +32,10 @@ let server=http.createServer(( req, res ) =>{
     });
 
 
-} else if (user_eneter_url_end_part === "/home.html") {
+ } 
+ else if (user_eneter_url_end_part === "/index.html") {
 
-    fs.readFile(requested_file_directory , "utf8", (err, data) => {
+   fs.readFile(requested_file_directory , "utf8", (err, data) => {
         if (err) {
             console.log(err);
             // Consider sending an error response to the client
@@ -47,7 +49,8 @@ let server=http.createServer(( req, res ) =>{
     });
 
 
-} else if (user_eneter_url_end_part === "/rooms.html") {
+ }
+else if (user_eneter_url_end_part === "/rooms.html") {
 
     fs.readFile(requested_file_directory , "utf8", (err, data) => {
         if (err) {
@@ -97,6 +100,23 @@ let server=http.createServer(( req, res ) =>{
 
 } else if (user_eneter_url_end_part === "/contact.html") {
 
+    fs.readFile(requested_file_directory , "utf8", (err, data) => {
+        if (err) {
+            console.log(err);
+            // Consider sending an error response to the client
+            res.writeHead(404, {"Content-type": "text/plain"});
+             res.end("404 Not Found");
+        } else{
+            res.writeHead(200, {"Content-type": "text/html"});
+            res.end(data);
+        }
+     
+    });
+
+
+} else  {
+
+    requested_file_directory = path.join(__dirname, "html", "page not found.html");
     fs.readFile(requested_file_directory , "utf8", (err, data) => {
         if (err) {
             console.log(err);
