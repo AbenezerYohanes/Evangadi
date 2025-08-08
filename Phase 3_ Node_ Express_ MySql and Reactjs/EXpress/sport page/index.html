@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportScape</title>
+    <!-- Use Tailwind CSS for modern, responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Font Import -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+    </style>
+</head>
+<body class="bg-[#0e1f2b] text-white">
+
+    <!-- Header -->
+    <header class="bg-[#0b1820] shadow-lg fixed w-full z-50">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="text-3xl font-bold text-[#f7a01d]">SportScape</a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#hero" class="text-white hover:text-[#f7a01d] transition-colors duration-300">Home</a>
+                <a href="#featured" class="text-white hover:text-[#f7a01d] transition-colors duration-300">Sports</a>
+                <a href="#news" class="text-white hover:text-[#f7a01d] transition-colors duration-300">News</a>
+                <a href="#contact" class="text-white hover:text-[#f7a01d] transition-colors duration-300">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0b1820] text-center">
+            <a href="#hero" class="block py-2 px-4 text-white hover:bg-gray-700 transition-colors duration-300">Home</a>
+            <a href="#featured" class="block py-2 px-4 text-white hover:bg-gray-700 transition-colors duration-300">Sports</a>
+            <a href="#news" class="block py-2 px-4 text-white hover:bg-gray-700 transition-colors duration-300">News</a>
+            <a href="#contact" class="block py-2 px-4 text-white hover:bg-gray-700 transition-colors duration-300">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-bg h-[600px] flex items-center justify-center text-center">
+            <div class="bg-black bg-opacity-60 p-8 md:p-12 rounded-xl max-w-2xl mx-auto shadow-2xl">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-[#f7a01d] leading-tight mb-4 animate-pulse-slow">Unleash Your Passion</h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8">
+                    Discover the latest news, scores, and highlights from around the world of sports.
+                </p>
+                <a href="#featured" class="bg-[#1e90ff] text-white font-bold py-3 px-8 rounded-full hover:bg-[#156cb3] transition-colors duration-300 shadow-xl transform hover:scale-105">
+                    Explore Sports
+                </a>
+            </div>
+        </section>
+
+        <!-- Featured Sports Section -->
+        <section id="featured" class="py-20 bg-[#15283a]">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-[#f7a01d]">Featured Sports</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Sports Card 1 -->
+                    <div class="bg-[#0b1820] rounded-xl overflow-hidden shadow-xl transform transition-transform hover:scale-105 group">
+                        <div class="card-bg-football h-48"></div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-[#1e90ff] transition-colors duration-300">Football</h3>
+                            <p class="text-gray-400 mt-2">The world's most popular sport, with thrilling matches and dedicated fans.</p>
+                        </div>
+                    </div>
+                    <!-- Sports Card 2 -->
+                    <div class="bg-[#0b1820] rounded-xl overflow-hidden shadow-xl transform transition-transform hover:scale-105 group">
+                        <div class="card-bg-basketball h-48"></div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-[#1e90ff] transition-colors duration-300">Basketball</h3>
+                            <p class="text-gray-400 mt-2">Fast-paced action and incredible athleticism on the court.</p>
+                        </div>
+                    </div>
+                    <!-- Sports Card 3 -->
+                    <div class="bg-[#0b1820] rounded-xl overflow-hidden shadow-xl transform transition-transform hover:scale-105 group">
+                        <div class="card-bg-tennis h-48"></div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-[#1e90ff] transition-colors duration-300">Tennis</h3>
+                            <p class="text-gray-400 mt-2">A game of skill, power, and strategy, played by champions.</p>
+                        </div>
+                    </div>
+                    <!-- Sports Card 4 -->
+                    <div class="bg-[#0b1820] rounded-xl overflow-hidden shadow-xl transform transition-transform hover:scale-105 group">
+                        <div class="card-bg-running h-48"></div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-[#1e90ff] transition-colors duration-300">Running</h3>
+                            <p class="text-gray-400 mt-2">Pushing the limits of endurance, from marathons to sprints.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest News Section -->
+        <section id="news" class="py-20 bg-[#0e1f2b]">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-[#f7a01d]">Latest News</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- News Article 1 -->
+                    <div class="bg-[#15283a] rounded-xl p-6 shadow-xl transform transition-transform hover:scale-105">
+                        <h3 class="text-xl font-bold text-white">Championship Final: The Nail-Biting Finish</h3>
+                        <p class="text-gray-400 mt-2 text-sm">
+                            In a stunning upset, the underdogs secured the title in the final seconds of overtime. A legendary performance from the star player will be remembered for years to come.
+                        </p>
+                        <a href="#" class="inline-block mt-4 text-[#1e90ff] hover:underline">Read More &rarr;</a>
+                    </div>
+                    <!-- News Article 2 -->
+                    <div class="bg-[#15283a] rounded-xl p-6 shadow-xl transform transition-transform hover:scale-105">
+                        <h3 class="text-xl font-bold text-white">New Athlete Breaks World Record</h3>
+                        <p class="text-gray-400 mt-2 text-sm">
+                            A young athlete from the national team has shattered a long-standing world record, cementing their place in sports history. Experts are calling it a monumental achievement.
+                        </p>
+                        <a href="#" class="inline-block mt-4 text-[#1e90ff] hover:underline">Read More &rarr;</a>
+                    </div>
+                    <!-- News Article 3 -->
+                    <div class="bg-[#15283a] rounded-xl p-6 shadow-xl transform transition-transform hover:scale-105">
+                        <h3 class="text-xl font-bold text-white">Behind the Scenes: Training for the Big Game</h3>
+                        <p class="text-gray-400 mt-2 text-sm">
+                            Go inside the training camp of a top-tier team as they prepare for the season's biggest match. Learn about their rigorous training and mental preparation.
+                        </p>
+                        <a href="#" class="inline-block mt-4 text-[#1e90ff] hover:underline">Read More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-[#0b1820] py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">&copy; 2024 SportScape. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.417 2.865 8.169 6.83 9.489.5.092.682-.217.682-.483 0-.237-.008-.867-.013-1.701-2.782.605-3.366-1.341-3.366-1.341-.454-1.156-1.11-1.465-1.11-1.465-.908-.62.069-.608.069-.608 1.004.07 1.532 1.029 1.532 1.029.892 1.528 2.341 1.087 2.91.832.091-.646.35-1.087.636-1.339-2.22-.253-4.555-1.107-4.555-4.93 0-1.091.39-1.984 1.029-2.682-.103-.253-.447-1.272.098-2.646 0 0 .84-.269 2.75 1.022.798-.222 1.649-.333 2.5-.337 2.5 0 2.5.337 3.3.337 1.912-1.291 2.75-1.022 2.75-1.022.546 1.373.202 2.392.099 2.646.64.698 1.028 1.591 1.028 2.682 0 3.83-2.339 4.675-4.566 4.922.359.31.678.922.678 1.854 0 1.339-.012 2.418-.012 2.744 0 .267.18.579.688.481C21.139 20.203 24 16.45 24 12.017 24 6.484 19.522 2 14 2h-2z" />
+                    </svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.25 4.567a8.47 8.47 0 0 1-2.454.673 4.225 4.225 0 0 0 1.86-2.36 8.442 8.442 0 0 1-2.695 1.027 4.22 4.22 0 0 0-7.202 3.844 11.947 11.947 0 0 1-8.683-4.394 4.222 4.222 0 0 0 1.306 5.632A4.218 4.218 0 0 1 2.22 7.74a4.222 4.222 0 0 0 3.385 4.12 4.234 4.234 0 0 1-1.905.072 4.22 4.22 0 0 0 3.946 2.923A8.455 8.455 0 0 1 2 18.006a11.921 11.921 0 0 0 6.452 1.884c7.74 0 11.97-6.402 11.97-11.946 0-.182-.004-.363-.012-.544A8.528 8.528 0 0 0 22.25 4.567z" />
+                    </svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.477 2 2 6.477 2 12c0 5.523 4.477 10 10 10s10-4.477 10-10c0-5.523-4.477-10-10-10zm0 16c-3.313 0-6-2.687-6-6s2.687-6 6-6 6 2.687 6 6-2.687 6-6 6zm-2.828-5.657a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm5.656 0a2 2 1 1 1 4 0 2 2 0 0 1-4 0zm-2.828 2.828a2 2 1 1 1-4 0 2 2 0 0 1 4 0z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- Link to the external JavaScript file -->
+    <script src="./script/script.js"></script>
+</body>
+</html>

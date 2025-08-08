@@ -1,0 +1,39 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+.hero-bg {
+    background-image: url('[https://placehold.co/1920x1080/0e1f2b/FFFFFF?text=SPORT%20HERO](https://placehold.co/1920x1080/0e1f2b/FFFFFF?text=SPORT%20HERO)');
+    background-size: cover;
+    background-position: center;
+}
+.card-bg-football {
+    background-image: url('[https://placehold.co/600x400/0d2f44/FFFFFF?text=Football](https://placehold.co/600x400/0d2f44/FFFFFF?text=Football)');
+    background-size: cover;
+    background-position: center;
+}
+.card-bg-basketball {
+    background-image: url('[https://placehold.co/600x400/0d2f44/FFFFFF?text=Basketball](https://placehold.co/600x400/0d2f44/FFFFFF?text=Basketball)');
+    background-size: cover;
+    background-position: center;
+}
+.card-bg-tennis {
+    background-image: url('[https://placehold.co/600x400/0d2f44/FFFFFF?text=Tennis](https://placehold.co/600x400/0d2f44/FFFFFF?text=Tennis)');
+    background-size: cover;
+    background-position: center;
+}
+.card-bg-running {
+    background-image: url('[https://placehold.co/600x400/0d2f44/FFFFFF?text=Running](https://placehold.co/600x400/0d2f44/FFFFFF?text=Running)');
+    background-size: cover;
+    background-position: center;
+}
+.animate-pulse-slow {
+    animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes pulse-slow {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .7;
+    }
+}
