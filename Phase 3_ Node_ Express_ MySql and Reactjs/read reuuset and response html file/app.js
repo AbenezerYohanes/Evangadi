@@ -1,149 +1,50 @@
-let http=require("http");
-let path=require("path");
-let fs=require("fs");
+let http = require("http");
+let path = require("path");
+let fs = require("fs");
+const mime = require('mime-types');
 
+// Base directory for your HTML files
+const htmlDirectory = path.join(__dirname, "html");
 
+let server = http.createServer((req, res) => {
+    let requestedUrl = req.url;
+    let filePath;
 
-
-let server=http.createServer(( req, res ) =>{
-
-
-    let user_eneter_url_end_part =req.url ;
-    console.log(user_eneter_url_end_part);
-
-    let requested_file_directory=path.join(__dirname, "html" , user_eneter_url_end_part);
-    console.log(requested_file_directory);
-
-
-    if (user_eneter_url_end_part === "/" || user_eneter_url_end_part === "index.html" ){
-        requested_file_directory = path.join(__dirname, "html", "index.html");
-
-     fs.readFile(requested_file_directory, "utf8", (err, data) => {
+    // Handle the root URL and index.html
+    if (requestedUrl === "/" || requestedUrl === "/index.html") {
+        filePath = path.join(htmlDirectory, "index.html");
+    } else {
+        // Construct the file path for other requests
+        filePath = path.join(htmlDirectory, requestedUrl);
+    }
+    
+    // Check if the file exists and is readable
+    fs.readFile(filePath, (err, data) => {
         if (err) {
-            console.log(err);
-            // Consider sending an error response to the client
-            res.writeHead(404, {"Content-type": "text/plain"});
-             res.end("404 Not Found");
-        } else{
-            res.writeHead(200, {"Content-type": "text/html"});
+            // Log the error for debugging
+            console.error(`Error reading file: ${err.message}`);
+            
+            // Serve a 404 page for any file not found
+            fs.readFile(path.join(htmlDirectory, "page not found.html"), "utf8", (error, notFoundData) => {
+                if (error) {
+                    res.writeHead(404, { "Content-type": "text/plain" });
+                    res.end("404 Not Found");
+                } else {
+                    res.writeHead(404, { "Content-type": "text/html" });
+                    res.end(notFoundData);
+                }
+            });
+        } else {
+            // Determine the content type based on the file extension
+            const contentType = mime.lookup(filePath) || 'application/octet-stream';
+            
+            // Send the file with the correct content type
+            res.writeHead(200, { "Content-type": contentType });
             res.end(data);
         }
-     
     });
-
-
- } 
- else if (user_eneter_url_end_part === "/index.html") {
-
-   fs.readFile(requested_file_directory , "utf8", (err, data) => {
-        if (err) {
-            console.log(err);
-            // Consider sending an error response to the client
-            res.writeHead(404, {"Content-type": "text/plain"});
-             res.end("404 Not Found");
-        } else{
-            res.writeHead(200, {"Content-type": "text/html"});
-            res.end(data);
-        }
-     
-    });
-
-
- }
-else if (user_eneter_url_end_part === "/rooms.html") {
-
-    fs.readFile(requested_file_directory , "utf8", (err, data) => {
-        if (err) {
-            console.log(err);
-            // Consider sending an error response to the client
-            res.writeHead(404, {"Content-type": "text/plain"});
-             res.end("404 Not Found");
-        } else{
-            res.writeHead(200, {"Content-type": "text/html"});
-            res.end(data);
-        }
-     
-    });
-
-
-} else if (user_eneter_url_end_part === "/dining.html") {
-
-    fs.readFile(requested_file_directory , "utf8", (err, data) => {
-        if (err) {
-            console.log(err);
-            // Consider sending an error response to the client
-            res.writeHead(404, {"Content-type": "text/plain"});
-             res.end("404 Not Found");
-        } else{
-            res.writeHead(200, {"Content-type": "text/html"});
-            res.end(data);
-        }
-     
-    });
-
-
-} else if (user_eneter_url_end_part === "/spa.html") {
-
-    fs.readFile(requested_file_directory , "utf8", (err, data) => {
-        if (err) {
-            console.log(err);
-            // Consider sending an error response to the client
-            res.writeHead(404, {"Content-type": "text/plain"});
-             res.end("404 Not Found");
-        } else{
-            res.writeHead(200, {"Content-type": "text/html"});
-            res.end(data);
-        }
-     
-    });
-
-
-} else if (user_eneter_url_end_part === "/contact.html") {
-
-    fs.readFile(requested_file_directory , "utf8", (err, data) => {
-        if (err) {
-            console.log(err);
-            // Consider sending an error response to the client
-            res.writeHead(404, {"Content-type": "text/plain"});
-             res.end("404 Not Found");
-        } else{
-            res.writeHead(200, {"Content-type": "text/html"});
-            res.end(data);
-        }
-     
-    });
-
-
-} else  {
-
-    requested_file_directory = path.join(__dirname, "html", "page not found.html");
-    fs.readFile(requested_file_directory , "utf8", (err, data) => {
-        if (err) {
-            console.log(err);
-            // Consider sending an error response to the client
-            res.writeHead(404, {"Content-type": "text/plain"});
-             res.end("404 Not Found");
-        } else{
-            res.writeHead(200, {"Content-type": "text/html"});
-            res.end(data);
-        }
-     
-    });
-
-
-} 
-
-
-
-
-
-
-
-
-
-
 });
 
 server.listen(3000, () => {
-    console.log("server is listenig on http://localhost:3000");
+    console.log("Server is listening on http://localhost:3000");
 });

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Heaven Hotel | Dining</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #fff8f0;
+    }
+
+    header {
+      background-color: #6b3e26;
+      color: #f0c330;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav a {
+      color: #f0c330;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .dining-section {
+      padding: 60px 10%;
+    }
+
+    .dining-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .dining-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .dining-card {
+      width: 300px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .dining-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .dining-card h3 {
+      margin: 15px 0 10px;
+      color: #333;
+    }
+
+    .dining-card p {
+      padding: 0 15px 20px;
+      color: #666;
+    }
+
+    footer {
+      background-color: #6b3e26;
+      color: #ddd;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Heaven Hotel</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="dining.html">Dining</a>
+      <a href="spa.html">Spa</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="dining-section">
+    <h2>Fine Dining Experience</h2>
+    <div class="dining-grid">
+
+      <div class="dining-card">
+        <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior">
+        <h3>Elegant Restaurant</h3>
+        <p>Enjoy gourmet meals crafted by world-class chefs in a luxurious setting.</p>
+      </div>
+
+      <div class="dining-card">
+        <img src="https://images.unsplash.com/photo-1543357480-c60d897fb89b?auto=format&fit=crop&w=800&q=80" alt="Buffet">
+        <h3>Daily Buffet</h3>
+        <p>Delight in our fresh and diverse buffet served every morning and evening.</p>
+      </div>
+
+      <div class="dining-card">
+        <img src="https://images.unsplash.com/photo-1601315576601-e873d6c83d3e?auto=format&fit=crop&w=800&q=80" alt="Cocktails">
+        <h3>Sunset Bar</h3>
+        <p>Relax with a cocktail in hand and a view of the horizon.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Heaven Hotel. All rights reserved.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Heaven Hotel | Home</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      color: #333;
+    }
+
+    /* Navigation Header */
+    header {
+      background-color: #000;
+      padding: 20px;
+      color: #fff;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f0c330;
+    }
+
+    /* Welcome Section */
+    .home-container {
+      text-align: center;
+      padding: 80px 20px;
+      background-color: #fff;
+    }
+
+    .home-container h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .home-container p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #666;
+    }
+
+    a.back-btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 30px;
+      background: #f0c330;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    a.back-btn:hover {
+      background: #e0b020;
+    }
+
+    .features {
+      background: #f9f9f9;
+      padding: 60px 10%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    .feature-card {
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
+      margin: 20px;
+    }
+
+    .feature-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .feature-card h3 {
+      margin: 15px 0 10px;
+    }
+
+    .gallery {
+      padding: 60px 10%;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .gallery-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .gallery-images img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .testimonials {
+      background-color: #f0f0f0;
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+    .testimonial {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      font-style: italic;
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">Heaven Hotel</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="dining.html">Dining</a>
+        <a href="spa.html">Spa</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Welcome Section -->
+  <div class="home-container">
+    <h1>Welcome to Heaven Hotel</h1>
+    <p>This is the homepage. Explore our rooms, dining, spa, and more to experience true paradise and luxury living.</p>
+    <a href="index.html" class="back-btn">Back to Main Page</a>
+  </div>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature-card">
+      <img src="https://th.bing.com/th/id/OIP.qRJFBjNjwd6WeVwwgkcDDgHaE7?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Luxury Rooms">
+      <h3>Luxury Suites</h3>
+      <p>Enjoy ocean views, king-size beds, and modern amenities in every room.</p>
+    </div>
+    <div class="feature-card">
+      <img src="https://th.bing.com/th/id/R.abefd61757cbbbc5099d5399c56df125?rik=Fpo3SwS3zlv6%2bA&pid=ImgRaw&r=0" alt="Fine Dining">
+      <h3>Fine Dining</h3>
+      <p>Our chefs prepare gourmet dishes from around the world just for you.</p>
+    </div>
+    <div class="feature-card">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.3ksh_jr758ZbjE8nj3nP8QHaEc?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Spa & Wellness">
+      <h3>Spa & Wellness</h3>
+      <p>Relax in our luxury spa with massages, saunas, and personalized treatments.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery">
+    <h2>Gallery</h2>
+    <p>A glimpse into the Heaven Hotel experience.</p>
+    <div class="gallery-images">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.erv-k8rTZH8P8VSN7ETLEgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Resort View">
+      <img src="https://th.bing.com/th/id/OIP.lo72lgIu5_f-kVBceFzNZQHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Beach View">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.a0JiOQU68db8YN_zb8tH4QHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Hotel Lobby">
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>What Our Guests Say</h2>
+    <div class="testimonial">
+      “The most relaxing vacation I’ve ever had! Everything was perfect — the food, the room, the staff. Absolute paradise.”  
+      <br><strong>– Maria, Italy</strong>
+    </div>
+    <div class="testimonial">
+      “I came here for a weekend getaway and ended up extending my stay. Heaven Hotel lives up to its name.”  
+      <br><strong>– David, USA</strong>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Heaven Hotel. All rights reserved.
+  </footer>
+
+</body>
+</html>

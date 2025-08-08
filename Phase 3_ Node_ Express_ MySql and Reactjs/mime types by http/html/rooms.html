@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Heaven Hotel | Rooms</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+    }
+
+    header {
+      background: #222;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #fff;
+      font-size: 24px;
+      margin: 0;
+    }
+
+    nav a {
+      color: #f0c330;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .room-section {
+      padding: 60px 10%;
+      background: #fff;
+    }
+
+    .room-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .rooms-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .room-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      width: 320px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .room-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .room-card h3 {
+      margin: 15px 0 5px;
+      color: #333;
+    }
+
+    .room-card p {
+      padding: 0 15px 15px;
+      font-size: 1rem;
+      color: #666;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header>
+    <h1>Heaven Hotel</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="dining.html">Dining</a>
+      <a href="spa.html">Spa</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Rooms Section -->
+  <section class="room-section">
+    <h2>Our Rooms & Suites</h2>
+    <div class="rooms-container">
+
+      <!-- Room 1 -->
+      <div class="room-card">
+        <img src="https://www.belmondcdn.com/static/BOH/suite-deluxe-05.jpg" alt="Deluxe Suite">
+        <h3>Deluxe Ocean Suite</h3>
+        <p>Spacious suite with a king-size bed, private balcony, ocean view, and luxury bath.</p>
+      </div>
+
+      <!-- Room 2 -->
+      <div class="room-card">
+        <img src="https://cdn.luxatic.com/wp-content/uploads/2020/04/best-luxury-hotel-rooms-2.jpg" alt="Presidential Suite">
+        <h3>Presidential Suite</h3>
+        <p>Unmatched elegance with a private pool, butler service, and panoramic views.</p>
+      </div>
+
+      <!-- Room 3 -->
+      <div class="room-card">
+        <img src="https://media.cntraveller.com/photos/611befbbbc635a62e4e9d50f/master/w_1600%2Cc_limit/The_Ritz_London-Deluxe_King_Room.jpg" alt="Classic King Room">
+        <h3>Classic King Room</h3>
+        <p>Ideal for couples, with modern furnishings, high-speed Wi-Fi, and rainfall showers.</p>
+      </div>
+
+      <!-- Room 4 -->
+      <div class="room-card">
+        <img src="https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-153,0000-875,0000-1920,0000-1080,0000/publish/content/dam/fourseasons/images/web/SIN/SIN_478_original.jpg" alt="Family Room">
+        <h3>Family Room</h3>
+        <p>Comfortable and spacious with two queen beds, a sitting area, and kids' amenities.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Heaven Hotel. All rights reserved.
+  </footer>
+
+</body>
+</html>

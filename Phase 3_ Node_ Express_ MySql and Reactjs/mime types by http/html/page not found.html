@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Page Not Found | Heaven Hotel</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://source.unsplash.com/1600x900/?clouds,sky') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      background-color: #111;
+    }
+
+    .error-container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 10px;
+      max-width: 600px;
+      width: 90%;
+    }
+
+    .error-container h1 {
+      font-size: 6rem;
+      margin-bottom: 20px;
+      color: #f0c330;
+    }
+
+    .error-container h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .error-container p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .error-container a {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #f0c330;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .error-container a:hover {
+      background: #e0b020;
+    }
+
+    @media screen and (max-width: 600px) {
+      .error-container h1 {
+        font-size: 4rem;
+      }
+
+      .error-container h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <h1>404</h1>
+    <h2>Oops! Page Not Found</h2>
+    <p>Sorry, the page you are looking for doesn't exist or has been moved.</p>
+    <a href="index.html">Return to Homepage</a>
+  </div>
+</body>
+</html>
