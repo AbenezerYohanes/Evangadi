@@ -32,7 +32,8 @@ server.get("/create_table",(req,res) =>{
 
     let student_table_query= `CREATE TABLE if not exists student (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL
+    first_name VARCHAR(100) NOT NULL,
+    Last_name VARCHAR(100) NOT NULL
 );`
 
 DB.query(student_table_query , (err , results , field) =>{
