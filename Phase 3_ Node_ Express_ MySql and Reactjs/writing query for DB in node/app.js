@@ -5,6 +5,15 @@ let mysql=require("mysql2");
 
 let server=express();
 
+server.use(express.static("html"));
+
+
+server.use(
+    express.urlencoded({
+        extended:true
+    })
+);
+
 let DB=mysql.createConnection({
 
     user : "abenezer_mamp",
@@ -100,6 +109,25 @@ let all_table_created="studnet teacher subject  enrollments are created successf
 res.end(all_table_created);
 
 });
+
+
+
+  // ****************inserting student information to the student table accepting from front end 
+
+  server.post("/registered" , (req ,res) =>{
+
+     console.log(req.body);
+      let { firstName, lastName } = req.body;
+
+
+     let student_data_inter=`INSERT INTO student (first_name , Last_name) VALUES (?, ?);`
+      
+     DB.query(student_data_inter , [firstName, lastName], (err ,result, field)=>{
+        if(err) console.log(err);
+        else console.log(result);
+     });
+    res.end("student infromation is inserted to the table ")
+  });
 
 
 
