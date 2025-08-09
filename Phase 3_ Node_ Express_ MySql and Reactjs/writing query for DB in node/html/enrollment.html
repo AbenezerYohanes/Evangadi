@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enroll Student</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>Enroll Student</header>
+    <div class="container">
+        <form action="http://localhost:3000/EnrollStudent" method="post">
+            <label>Student ID</label>
+            <input type="number" name="student_id" required>
+            
+            <label>Subject ID</label>
+            <input type="number" name="subject_id" required>
+            
+            <label>Teacher ID</label>
+            <input type="number" name="teacher_id" required>
+            
+            <button type="submit">Enroll</button>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

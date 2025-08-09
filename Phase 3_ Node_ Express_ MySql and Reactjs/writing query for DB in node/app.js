@@ -106,7 +106,7 @@ DB.query(enrollments_table_query , (err , results , field) =>{
     if (err) console.log(err);
 } );
 let all_table_created="studnet teacher subject  enrollments are created successfully ";
-res.end(all_table_created);
+ res.redirect("/");
 
 });
 
@@ -114,7 +114,7 @@ res.end(all_table_created);
 
   // ****************inserting student information to the student table accepting from front end 
 
-  server.post("/registered" , (req ,res) =>{
+  server.post("/StudentRegistered" , (req ,res) =>{
 
      console.log(req.body);
       let { firstName, lastName } = req.body;
@@ -126,10 +126,53 @@ res.end(all_table_created);
         if(err) console.log(err);
         else console.log(result);
      });
-    res.end("student infromation is inserted to the table ")
+   res.redirect("/");
   });
 
 
+
+
+  // Insert Teacher
+server.post("/TeacherRegistered", (req, res) => {
+    let { teacher_name, teacher_email } = req.body;
+    let query = `INSERT INTO teacher (teacher_name, teacher_email) VALUES (?, ?)`;
+    DB.query(query, [teacher_name, teacher_email], (err, result) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Error inserting teacher");
+        } else {
+           res.redirect("/");
+        }
+    });
+});
+
+// Insert Subject
+server.post("/SubjectRegistered", (req, res) => {
+    let { subject_name, credit_hour } = req.body;
+    let query = `INSERT INTO subject (subject_name, credit_hour) VALUES (?, ?)`;
+    DB.query(query, [subject_name, credit_hour], (err, result) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Error inserting subject");
+        } else {
+           res.redirect("/");
+        }
+    });
+});
+
+// Enroll Student
+server.post("/EnrollStudent", (req, res) => {
+    let { student_id, subject_id, teacher_id } = req.body;
+    let query = `INSERT INTO enrollments (student_id, subject_id, teacher_id) VALUES (?, ?, ?)`;
+    DB.query(query, [student_id, subject_id, teacher_id], (err, result) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Error enrolling student");
+        } else {
+            res.send("Student enrolled successfully");
+        }
+    });
+});
 
 
 

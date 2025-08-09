@@ -2,47 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Registration</title>
-    <!-- Tailwind CSS for modern styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6; /* Light gray background */
-        }
-    </style>
+    <title>Main Menu</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="flex items-center justify-center min-h-screen">
-
-    <!-- Main container for the form -->
-    <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md border border-gray-200">
-        <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Student Registration</h2>
-        
-        <!-- The form itself -->
-        <form id="studentForm"
-        action="http://localhost:3000/registered"
-        method="post">
-            <!-- First Name field -->
-            <div class="mb-4">
-                <label for="firstName" class="block text-gray-700 font-semibold mb-2">First Name</label>
-                <input type="text" id="firstName" name="firstName" placeholder="Enter first name" required
-                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200">
-            </div>
-
-            <!-- Last Name field -->
-            <div class="mb-6">
-                <label for="lastName" class="block text-gray-700 font-semibold mb-2">Last Name</label>
-                <input type="text" id="lastName" name="lastName" placeholder="Enter last name" required
-                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200">
-            </div>
-
-            <!-- Submit button -->
-            <button type="submit" 
-                    class="w-full bg-indigo-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition duration-200 shadow-md">
-                Register Student
-            </button>
-        </form>
-    </div>
+<body>
+    <header>School Management Dashboard</header>
+    <nav>
+        <a href="student.html">Add Student</a>
+        <a href="teacher.html">Add Teacher</a>
+        <a href="subject.html">Add Subject</a>
+        <a href="enrollment.html">Enroll Student</a>
+        <a href="/create_table">Create Tables</a>
+    </nav>
 </body>
 </html>
